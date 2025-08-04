@@ -1,0 +1,26 @@
+class LoginPage{
+     selectorsList() {
+        const selectors = {
+            usernameField: "[name='username']",
+            passwordField: "[name='password']",
+            loginButton: "[type='submit']",
+            WorngCredentialAlertRequiredPassword:'.oxd-input-group > .oxd-text',
+            worngCredentialAlertInvalidCredentials: '.oxd-alert-content > .oxd-text',
+
+        }
+
+        return selectors
+    } 
+
+     accessLoginPage() {
+        cy.visit('/auth/login')
+    }
+
+    LoginWithUser(username, password){
+        cy.get(this.selectorsList().usernameField).type(username)
+        cy.get(this.selectorsList().passwordField).type(password)
+        cy.get(this.selectorsList().loginButton).click()
+    }
+}
+
+export default LoginPage
