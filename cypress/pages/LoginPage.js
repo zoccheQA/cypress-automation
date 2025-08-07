@@ -13,7 +13,7 @@ class LoginPage{
     } 
 
      accessLoginPage() {
-        cy.visit('/auth/login')
+        cy.visit('/auth/login').wait(20000)
     }
 
     LoginWithUser(username, password){
@@ -41,3 +41,4 @@ class LoginPage{
 }
 
 export default LoginPage
+
