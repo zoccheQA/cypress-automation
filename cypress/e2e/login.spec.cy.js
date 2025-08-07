@@ -7,7 +7,7 @@ const dashboardPage = new DashboardPage()
 
 describe('Logins - Orange HRM Tests', () => {
  
- it('Login - Success', () => { // EXERCISIO 1.1
+ it('Login - Success', () => { // EXERCICIO 1.1
   loginPage.accessLoginPage()
   loginPage.LoginWithUser(userData.userSuccess.username, userData.userSuccess.password)
   dashboardPage.checkDashboardPage()
