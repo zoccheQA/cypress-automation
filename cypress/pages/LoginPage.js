@@ -13,7 +13,7 @@ class LoginPage{
     } 
 
      accessLoginPage() {
-        cy.visit('/auth/login').wait(20000)
+        cy.visit('/auth/login')
     }
 
     LoginWithUser(username, password){
